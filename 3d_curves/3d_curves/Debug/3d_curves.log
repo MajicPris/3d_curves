@@ -1,0 +1,21 @@
+﻿  3d_curves.cpp
+c:\users\kshar\source\repos\3d_curves\3d_curves\3d_curves.cpp(49): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\kshar\source\repos\3d_curves\3d_curves\3d_curves.cpp(56): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\kshar\source\repos\3d_curves\3d_curves\3d_curves.cpp(63): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\kshar\source\repos\3d_curves\3d_curves\3d_curves.cpp(68): warning C4018: <: несоответствие типов со знаком и без знака
+  Figures.cpp
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(42): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(47): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(52): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(57): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(92): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(97): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(102): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(107): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(142): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(147): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(152): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(157): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\kshar\source\repos\3d_curves\3d_curves\figures.cpp(162): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Создание кода...
+  3d_curves.vcxproj -> C:\Users\kshar\source\repos\3d_curves\Debug\3d_curves.exe
