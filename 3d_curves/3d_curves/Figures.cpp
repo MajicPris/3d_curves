@@ -17,10 +17,10 @@ float random(float min, float max)
 circle::circle() {
 	figure_type = Circle_ID;
 }
-void circle::setT(float t1)
+/*void circle::setT(float t1)
 {
 	t = t1;
-}
+}*/
 void circle::setX0()
 {
 	coord0.x = random(0.0, 10.0);
@@ -37,39 +37,36 @@ void circle::setRadius()
 {
 	rX = random(1.0, 100.0);
 }
-float circle::getX()
+Point circle::getCoord()
 {
-	coord.x = coord0.x + rX * cos(t*PI / 180);
-	return coord.x;
+	Point p;
+	p.x = coord0.x + rX * cos(t*PI / 180);
+	p.y = coord0.y + rX * sin(t*PI / 180);
+	p.z = 0;
+	return p;
 }
-float circle::getY()
+Point circle::getProizvCoord()
 {
-	coord.y = coord0.y + rX * sin(t*PI / 180);
-	return coord.y;
+	Point p1;
+	p1.x = -rX * sin(t*PI / 180);
+	p1.y = rX * cos(t*PI / 180);
+	p1.z = 0;
+	return p1;
 }
-float circle::getProizvX()
-{
-	proizv.x = -rX * sin(t*PI / 180);
-	return proizv.x;
-}
-float circle::getProizvY()
-{
-	proizv.y = rX * cos(t*PI / 180);
-	return proizv.y;
-}
+
 void circle::show()
 {
-	cout << "circle" << "  Radius:" << rX << "  Coordinate: X:" << getX() << "  Y:" << getY() << "   Derivative: X':" << getProizvX() << "  Y':" << getProizvY() << "  Yx':" << (getProizvY() / getProizvX()) << endl;
+	cout <<"circle" << "  Radius:" << rX << "  Coordinate: " << getCoord() << "   Derivative: "<< getProizvCoord()<< endl;
 }
 
 //ELLIPSE
 ellipse::ellipse() {
 	figure_type = Ellipse_ID;
 }
-void ellipse::setT(float t1)
+/*void ellipse::setT(float t1)
 {
 	t = t1;
-}
+}*/
 void ellipse::setX0()
 {
 	coord0.x = random(0.0, 10.0);
@@ -87,29 +84,25 @@ void ellipse::setRadius()
 	rX = random(1.0, 100.0);
 	rY = random(1.0, 100.0);
 }
-float ellipse::getX()
+Point ellipse::getCoord()
 {
-	coord.x = coord0.x + rX * cos(t*PI / 180);
-	return coord.x;
+	Point p;
+	p.x = coord0.x + rX * cos(t*PI / 180);
+	p.y = coord0.y + rY * sin(t*PI / 180);
+	p.z = 0;
+	return p;
 }
-float ellipse::getY()
+Point ellipse::getProizvCoord()
 {
-	coord.y = coord0.y + rY * sin(t*PI / 180);
-	return coord.y;
-}
-float ellipse::getProizvX()
-{
-	proizv.x = -rX * sin(t*PI / 180);
-	return proizv.x;
-}
-float ellipse::getProizvY()
-{
-	proizv.y = rY * cos(t*PI / 180);
-	return proizv.y;
+	Point p1;
+	p1.x = -rX * sin(t*PI / 180);
+	p1.y = rY * cos(t*PI / 180);
+	p1.z = 0;
+	return p1;
 }
 void ellipse::show()
 {
-	cout << "ellipse" << "  Radius_X:" << rX << "  Radius_Y:" << rY << "  Coordinate: X:" << getX() << "  Y:" << getY() << "   Derivative: X':" << getProizvX() << "  Y':" << getProizvY() << "  Yx':" << (getProizvY() / getProizvX()) << endl;
+	cout << "ellipse" << "  Radius_X:" << rX << "  Radius_Y:" << rY << "  Coordinate: " << getCoord() << "   Derivative: " << getProizvCoord() << endl;
 }
 
 
@@ -117,10 +110,10 @@ void ellipse::show()
 helixes::helixes() {
 	figure_type = Helixes_ID;
 }
-void helixes::setT(float t1)
+/*void helixes::setT(float t1)
 {
 	t = t1;
-}
+}*/
 void helixes::setX0()
 {
 	coord0.x = random(0.0, 10.0);
@@ -137,37 +130,23 @@ void helixes::setRadius()
 {
 	rX = random(1.0, 100.0);
 }
-float helixes::getX()
+Point helixes::getCoord()
 {
-	coord.x = coord0.x + rX * cos(t*PI / 180);
-	return coord.x;
+	Point p;
+	p.x = coord0.x + rX * cos(t*PI / 180);
+	p.y = coord0.y + rX * sin(t*PI / 180);
+	p.z = coord0.z + step * t;
+	return p;
 }
-float helixes::getY()
+Point helixes::getProizvCoord()
 {
-	coord.y = coord0.y + rX * sin(t*PI / 180);
-	return coord.y;
-}
-float helixes::getZ()
-{
-	coord.z = coord0.z + step * t;
-	return coord.z;
-}
-float helixes::getProizvX()
-{
-	proizv.x = -rX * sin(t*PI / 180);
-	return proizv.x;
-}
-float helixes::getProizvY()
-{
-	proizv.y = rX * cos(t*PI / 180);
-	return proizv.y;
-}
-float helixes::getProizvZ()
-{
-	proizv.z = 0;
-	return proizv.z;
+	Point p1;
+	p1.x = -rX * sin(t*PI / 180);
+	p1.y = rX * cos(t*PI / 180);
+	p1.z = 0;
+	return p1;
 }
 void helixes::show()
 {
-	cout << "helixes" << "  Radius:" << rX << "  Coordinate: X:" << getX() << "  Y:" << getY() << "  Z:" << getZ() << "   Derivative: X':" << getProizvX() << "  Y':" << getProizvY() << "  Z':" << getProizvZ() << "  Yx':" << (getProizvY() / getProizvX()) << endl;
+	cout << "helixes" << "  Radius:" << rX << "  Coordinate: " << getCoord() << "   Derivative: " << getProizvCoord() << endl;
 }
