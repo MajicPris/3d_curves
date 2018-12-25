@@ -28,14 +28,35 @@ int main()
 		{
 			figures = new helixes;
 		}
-		//figures->setT(45);
 		figures->setRadius();
 		figures->setX0();
 		figures->setY0();
 		figures->setZ0();
 		v.push_back(figures);
 	}
-
+	/*unique_ptr<Figure> figures;
+	vector<unique_ptr<Figure>> v;
+	for (int i = 0; i < 10; ++i)
+	{
+		if (i == 1 || i == 3 || i == 9 || i == 0)
+		{
+			unique_ptr<Figure> figures(new circle);
+		}
+		else if (i == 2 || i == 4 || i == 8)
+		{
+			unique_ptr<Figure> figures(new ellipse);
+		}
+		else
+		{
+			unique_ptr<Figure> figures(new helixes(45));
+		}
+		//figures->setT(45);
+		figures->setRadius();
+		figures->setX0();
+		figures->setY0();
+		figures->setZ0();
+		v.push_back(figures);
+	}*/
 	cout << "=====================================First vector=====================================" << endl;
 	for (int i = 0; i < 10; ++i)
 	{
@@ -73,16 +94,16 @@ int main()
 		sum_radius += v1[i]->rX;
 	}
 	cout << "\nSum_Radius = " << sum_radius << endl;
-	for (int i = 0; i < v.size(); ++i)
+	/*for (int i = 0; i < v.size(); ++i)
 	{
 		delete v[i];
 	}
 	for (int i = 0; i < v1.size(); ++i)
 	{
 		delete v1[i];
-	}
+	}*/
 	_CrtDumpMemoryLeaks();
-	//system("pause");
+	system("pause");
 	return 0;
 }
 
