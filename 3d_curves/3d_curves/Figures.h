@@ -18,10 +18,9 @@ struct Point {
 
 class Figure {
 public:
-	Point coord0, coord, proizv;
+	Point coord0;
 	float rX, rY;
-	float t=45;
-	double step = 2.0;
+	float t;
 	Figure_Type figure_type;
 	virtual void show() { cout << "figure"; }
 	virtual void setRadius() = 0;
@@ -44,7 +43,6 @@ public:
 class circle : public Figure {
 public:
 	circle();
-	//void setT(float t1);
 	void setX0();
 	void setY0();
 	void setZ0();
@@ -58,7 +56,6 @@ class ellipse : public Figure {
 
 public:
 	ellipse();
-	//void setT(float t1);
 	void setX0();
 	void setY0();
 	void setZ0();
@@ -70,8 +67,8 @@ public:
 
 class helixes : public Figure {
 public:
+	double step = 2.0;
 	helixes();
-	//void setT(float t1);
 	void setX0();
 	void setY0();
 	void setZ0();
