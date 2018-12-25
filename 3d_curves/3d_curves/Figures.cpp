@@ -16,11 +16,8 @@ float random(float min, float max)
 //CIRCLE
 circle::circle() {
 	figure_type = Circle_ID;
+	t = 45;
 }
-/*void circle::setT(float t1)
-{
-	t = t1;
-}*/
 void circle::setX0()
 {
 	coord0.x = random(0.0, 10.0);
@@ -62,11 +59,8 @@ void circle::show()
 //ELLIPSE
 ellipse::ellipse() {
 	figure_type = Ellipse_ID;
+	t = 45;
 }
-/*void ellipse::setT(float t1)
-{
-	t = t1;
-}*/
 void ellipse::setX0()
 {
 	coord0.x = random(0.0, 10.0);
@@ -109,11 +103,8 @@ void ellipse::show()
 //HELIXES
 helixes::helixes() {
 	figure_type = Helixes_ID;
+	t = 45;
 }
-/*void helixes::setT(float t1)
-{
-	t = t1;
-}*/
 void helixes::setX0()
 {
 	coord0.x = random(0.0, 10.0);
@@ -135,7 +126,7 @@ Point helixes::getCoord()
 	Point p;
 	p.x = coord0.x + rX * cos(t*PI / 180);
 	p.y = coord0.y + rX * sin(t*PI / 180);
-	p.z = coord0.z + step * t;
+	p.z = coord0.z + step * t/(2*PI);
 	return p;
 }
 Point helixes::getProizvCoord()
@@ -143,7 +134,7 @@ Point helixes::getProizvCoord()
 	Point p1;
 	p1.x = -rX * sin(t*PI / 180);
 	p1.y = rX * cos(t*PI / 180);
-	p1.z = 0;
+	p1.z = step/(2*PI);
 	return p1;
 }
 void helixes::show()
